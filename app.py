@@ -13,18 +13,21 @@ import firebase_admin
 from firebase_admin import credentials, firestore
 
 # --- CONFIG ---
-GEMINI_API_KEY = "PASTE_YOUR_GEMINI_KEY"
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 
-FIREBASE_CONFIG = {
-    "type": "service_account",
-    "project_id": "communiserve-cb375",
-    "private_key_id": "PASTE_KEY_ID",
-    "private_key": "PASTE_PRIVATE_KEY",
-    "client_email": "PASTE_CLIENT_EMAIL",
-    "client_id": "PASTE_CLIENT_ID",
-    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-    "token_uri": "https://oauth2.googleapis.com/token"
-}
+# --- FIREBASE INIT ---
+@st.cache_resource
+def init_firebase():
+    try:
+        if not firebase_admin._apps:
+            key_dict = json.loads(st.secrets["firebase"]["key_json"])
+            cred = credentials.Certificate(key_dict)
+            firebase_admin.initialize_app(cred)
+        return firestore.client()
+    except:
+        return None
+
+db = init_firebase()
 
 # --- NGO ACCOUNTS (no Firebase Auth needed) ---
 NGO_ACCOUNTS = {
