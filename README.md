@@ -157,42 +157,7 @@ communiserve/
 
 ---
 
-## 👩‍💻 Team
-
-| Name | Role | College |
-|---|---|---|
-| Khanishka | Developer & ML Engineer | Jeppiaar Engineering College, Chennai |
-
----
-
-## 📸 Screenshots
-
-### Home Page
-![Home](screenshots/home.png)
-
-### Active Needs Map
-![Map](screenshots/map.png)
-
-### SOS Auto-Triage
-![SOS](screenshots/sos.png)
-
-### NGO Admin Panel
-![NGO](screenshots/ngo.png)
-
----
-
-## 🏆 Google Solutions Challenge 2025
-
-This project was built for the **Google Solutions Challenge 2025**, using:
-- ✨ **Gemini AI** — for intelligent volunteer matching, SOS triage, task verification, OCR, and audio analysis
-- 🔥 **Firebase Firestore** — for real-time data persistence across volunteers and community needs
-
----
-
 ## 📄 License
 
 MIT License — feel free to use, modify, and distribute.
 
----
-
-*Built with ❤️ from Chennai, India 🇮🇳*
