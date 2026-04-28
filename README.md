@@ -33,7 +33,7 @@ Local NGOs and social groups collect critical community needs through **paper su
 
 🌐 **Live App:** 
 
-(smart-resource-allocation-yo7sggt2yz6nnzpw2gxzh8.streamlit.app)
+smart-resource-allocation-yo7sggt2yz6nnzpw2gxzh8.streamlit.app
 
 ---
 
